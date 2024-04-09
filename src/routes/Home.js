@@ -23,6 +23,7 @@ function Home() {
                         // id, title, summary, medium_cover_image, genres
                         movies.map((movie) =>
                         (<Movie
+                            key={movie.id}
                             id={movie.id}
                             title={movie.title}
                             summary={movie.summary}
