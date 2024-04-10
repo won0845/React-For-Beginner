@@ -13,7 +13,7 @@ function Detail() {
     };
     useEffect(() => {
         getMovie();
-    }, [])
+    }, []);
     if (!response) return <h1>Loading...</h1>
     const movie = response.data.movie;
     return (
@@ -24,7 +24,7 @@ function Detail() {
             </h2>
             <p>{movie.description_full}</p>
             <ul>
-                {movie.genres.map((g) => <li key={g}>{g}</li>)}
+                {movie.genres?.map((g) => <li key={g}>{g}</li>)}
             </ul>
         </div>
    );
